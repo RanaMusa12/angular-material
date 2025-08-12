@@ -1,0 +1,35 @@
+section{
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    gap: 40px;
+   margin: 20px 0;
+
+     padding: 0 16px; /* Prevents edge-to-edge stretching */
+  box-sizing: border-box; /* Ensures padding doesn’t add to width */
+}
+
+mat-card{
+    height: auto;
+    width: 100%;
+    max-height: max-content;
+    max-width:  700px;
+    background-color: rgb(252, 238, 191);
+    box-shadow: 0 0 20px rgb(82, 49, 199);
+}
+button {
+    margin: auto;
+    height: 50px;
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+mat-card-title{
+
+    font-size: 2rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

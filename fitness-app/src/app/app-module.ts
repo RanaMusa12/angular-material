@@ -12,6 +12,8 @@ import { CurrentTraining } from './training/current-training/current-training';
 import { NewTraining } from './training/new-training/new-training';
 import { PastTrainings } from './training/past-trainings/past-trainings';
 import { FormsModule } from '@angular/forms';
+import { Header } from './navigation/header/header';
+import { SidenavList } from './navigation/sidenav-list/sidenav-list';
 
 
 
@@ -27,6 +29,8 @@ import { FormsModule } from '@angular/forms';
     CurrentTraining,
     NewTraining,
     PastTrainings,
+    Header,
+    SidenavList,
 
   ],
   imports: [

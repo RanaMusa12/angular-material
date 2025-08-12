@@ -1,20 +1,31 @@
-.form-style{
+.form-style {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    margin-top: 70px;
 }
-mat-form-field {
 
-    width: 500PX;
-    margin: 10px 0;
+mat-form-field {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
     font-size: 1.3rem;
+
 }
-button{
+
+button {
 
     padding: 30px 40px;
     font-size: 1.4rem;
     margin-right: 20px;
+    margin-top: 50px;
+}
+
+
+.my-checkbox-wrapper {
+    --mat-checkbox-label-text-size: 1.3rem;
+    --mat-checkbox-label-text-color: #333;
 }
