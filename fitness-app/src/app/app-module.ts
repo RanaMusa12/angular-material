@@ -14,7 +14,7 @@ import { PastTrainings } from './training/past-trainings/past-trainings';
 import { FormsModule } from '@angular/forms';
 import { Header } from './navigation/header/header';
 import { SidenavList } from './navigation/sidenav-list/sidenav-list';
-
+import {StopTrainingComponent} from './training/current-training/stop-training.component'
 
 
 
@@ -31,6 +31,7 @@ import { SidenavList } from './navigation/sidenav-list/sidenav-list';
     PastTrainings,
     Header,
     SidenavList,
+    StopTrainingComponent,
 
   ],
   imports: [

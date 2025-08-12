@@ -13,4 +13,4 @@
 </div>
 
 
-<app-current-training  *ngIf = "ongoingTraining"/>
+<app-current-training  *ngIf = "ongoingTraining" (trainingExit)="ongoingTraining = false"/>
