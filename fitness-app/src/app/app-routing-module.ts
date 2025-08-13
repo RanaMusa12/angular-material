@@ -4,6 +4,7 @@ import { Welcome } from './welcome/welcome';
 import { Login } from './auth/login/login';
 import { Signup } from './auth/signup/signup';
 import { Training } from './training/training';
+import { AuthGaurd } from './auth/auth.gaurd';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'training',
-    component: Training
+    component: Training,
+    canActivate: [AuthGaurd]
   },
   
 
@@ -30,6 +32,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthGaurd]
+
 })
 export class AppRoutingModule { }

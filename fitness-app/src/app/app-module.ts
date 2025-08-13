@@ -11,10 +11,16 @@ import { Training } from './training/training';
 import { CurrentTraining } from './training/current-training/current-training';
 import { NewTraining } from './training/new-training/new-training';
 import { PastTrainings } from './training/past-trainings/past-trainings';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Header } from './navigation/header/header';
 import { SidenavList } from './navigation/sidenav-list/sidenav-list';
 import {StopTrainingComponent} from './training/current-training/stop-training.component'
+import { AuthService} from './auth/auth.service'
+import { TrainingService } from './training/training.service';
+import { AngularFireModule } from '@angular/fire/compat'; 
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'; 
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 
 
@@ -32,20 +38,23 @@ import {StopTrainingComponent} from './training/current-training/stop-training.c
     Header,
     SidenavList,
     StopTrainingComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRoutingModule,
-    FormsModule
-  
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    AuthService,
+    TrainingService,
   ],
-  bootstrap: [App]
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}
