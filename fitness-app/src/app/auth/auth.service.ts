@@ -4,12 +4,12 @@ import {User} from './user.module'
 import { Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-
-
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import firebase from 'firebase/compat/app';
 @Injectable()
 export class AuthService{
 
-    constructor(private router: Router){
+    constructor(private router: Router, private afAuth: AngularFireAuth){
 
     };
 
@@ -17,10 +17,14 @@ export class AuthService{
     private user!: User |null;
 
     registerUser(authData: AuthData){
-        this.user={
-            email: authData.email,
-            userId: Math.round(Math.random() * 10000).toString(),
-        };
+        this.afAuth.createUserWithEmailAndPassword(authData.email, authData.password)
+      .then(result => {
+        // User registered and logged in automatically
+      })
+      .catch(error => {
+        console.error('Registration error:', error);
+        // Handle errors here (show to user)
+      });
         this.authSuccessfuly();
     }
 

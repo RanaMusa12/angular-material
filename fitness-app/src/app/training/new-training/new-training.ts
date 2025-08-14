@@ -4,6 +4,9 @@ import {TrainingService} from '../training.service'
 import { Exersise } from '../exersise.module';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestoreCollection } from '@angular/fire/compat/firestore'; 
+
+
 
 @Component({
   selector: 'app-new-training',
@@ -12,6 +15,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrl: './new-training.css'
 })
 export class NewTraining implements OnInit {
+
+  usersCollection !: AngularFirestoreCollection<any>;
 
   constructor(private trainingService: TrainingService, private db :AngularFirestore){}
 
@@ -23,14 +28,9 @@ export class NewTraining implements OnInit {
   this.trainingService.startExersise(form.value.exercise)
  }
 
- ngOnInit(): void {
+ngOnInit(): void {
+  this.exersises = this.trainingService.getAvailableExersises();
+}
 
-  // this.exersises = this.trainingService.getAvailableExersises();
-   this.db.collection('availableExercises').valueChanges().subscribe(result =>{
-
-    console.log(result);
-
-   })
- }
 
 }

@@ -1,0 +1,24 @@
+
+// //https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+// @import '~@angular/material/theming';
+
+// // Step 1: Include core styles
+// @include mat-core();
+
+// // Step 2: Define color palettes
+// $my-primary: mat-palette($mat-red);
+// $my-accent: mat-palette($mat-pink, A200, A100, A400);
+// $my-warn: mat-palette($mat-red);
+
+// // Step 3: Define the theme
+// $my-theme: mat-light-theme((
+//   color: (
+//     primary: $my-primary,
+//     accent: $my-accent,
+//     warn: $my-warn,
+//   )
+// ));
+
+// // Step 4: Apply the theme
+// @include angular-material-theme($my-theme);

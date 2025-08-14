@@ -1,15 +1,11 @@
-import { Component, signal, viewChild } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
+  styleUrls: ['./app.css'],  // plural
   standalone: false,
-  styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('fitness-app');
-
-  
-
-  
 }

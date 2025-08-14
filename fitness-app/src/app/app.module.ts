@@ -14,16 +14,13 @@ import { PastTrainings } from './training/past-trainings/past-trainings';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Header } from './navigation/header/header';
 import { SidenavList } from './navigation/sidenav-list/sidenav-list';
-import {StopTrainingComponent} from './training/current-training/stop-training.component'
-import { AuthService} from './auth/auth.service'
+import { StopTrainingComponent } from './training/current-training/stop-training.component';
+import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
-import { AngularFireModule } from '@angular/fire/compat'; 
 import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/compat/firestore'; 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-
-
-
 
 @NgModule({
   declarations: [
@@ -46,9 +43,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment),
     AngularFirestoreModule,
-    AngularFireAuthModule,
+    AngularFireAuthModule 
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

@@ -2,9 +2,9 @@
 
     <form fxLayout="column" fxLayoutAlign="center center" [formGroup]="loginForm" fxLayoutGap="20px" (ngSubmit)="onSubmit()">
         
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="your email" formControlName="email">
+        <mat-form-field appearance="fill">
+            <mat-label >Email</mat-label>
+            <input type="email" matInput placeholder="your email" formControlName="email" >
             <mat-error>Invalid email</mat-error>
         </mat-form-field>      
         <mat-form-field>
